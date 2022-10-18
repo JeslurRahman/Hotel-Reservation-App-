@@ -8,6 +8,8 @@ import {
 } from "../controllers/hotelCon.js";
 import Hotel from "../models/Hotel.js";
 import { createError } from "../utils/error.js";
+import { verifyAdmin, verifyToken, verifyUser } from "../utils/verifyToken.js";
+
 const router = express.Router();
 
 /**async / await
@@ -17,13 +19,13 @@ const router = express.Router();
  */
 
 //create
-router.post("/add", createHotel);
+router.post("/add", verifyAdmin, createHotel);
 
 //update
-router.put("/:id", updateHotel);
+router.put("/:id", verifyAdmin, updateHotel);
 
 //delete
-router.delete("/:id", deleteHotel);
+router.delete("/:id", verifyAdmin, deleteHotel);
 
 //get
 router.get("/:id", getHotel)

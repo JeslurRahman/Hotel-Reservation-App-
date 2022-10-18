@@ -7,6 +7,9 @@ import usersRoute from "./routes/users.js"
 import hotelsRoute from "./routes/hotels.js"
 import roomsRoute from "./routes/rooms.js"
 
+import cookieParser from "cookie-parser"
+
+
 // const express = required("express")
 //instead of these code line structure  we can use  "type": "module", in package.json file
 
@@ -30,6 +33,8 @@ mongoose.connection.on("disconnected", () => {
 })
 
 //middleware
+
+app.use(cookieParser())
 
 app.use(express.json())
 /**By default cannot send any json object to express server 
