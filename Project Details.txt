@@ -1,0 +1,11 @@
+mongoDB
+Email - mmjeslurrahman03@gmail.com
+pswrd - mongoDB@123
+
+DB User
+Username - admin
+pswrd -admin1234
+
+Connection link :
+MONGO = mongodb+srv://admin:admin1234@reservation-app.msilnep.mongodb.net/booking?retryWrites=true&w=majority
+DB name : booking
