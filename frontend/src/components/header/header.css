@@ -61,6 +61,7 @@
   width: 100%;
   max-width: 1024px;
 }
+
 .headerIcon {
   color: lightgray;
 }
@@ -84,21 +85,11 @@
 .date {
   position: absolute;
   top: 50px;
+  z-index: 2;
 }
 
-/**
-                        link- https://hypeserver.github.io/react-date-range/
-                        npm i react-date-range
-                        npm i date-fns
-
-                        import library:-
-                        import 'react-date-range/dist/styles.css'; // main css file
-                        import 'react-date-range/dist/theme/default.css'; // theme css file
-                        A date library agnostic React component for choosing dates and date ranges. Uses date-fns for date operations.
-
-                        */
-
 .options {
+  z-index: 2;
   position: absolute;
   top: 50px;
   background-color: white;
